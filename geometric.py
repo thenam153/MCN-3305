@@ -1,13 +1,13 @@
 import math
 
 def prob(n, p):
-    return pow(p, n)
+    return p * pow(1 - p, n - 1)
 def infoMeasure(n, p):
     return -math.log2(prob(n, p))
 def sumProb(N, p):
     """
         Dùng phương pháp thực nghiệm tính toán cho thấy
-        hàm sumProb trả về giá trị 1 với N >= 100
+        hàm sumProb trả về giá trị 1 
     """
     xs = 0.0
     for s in range(1, N + 1):
@@ -19,4 +19,4 @@ def approxEntropy(N, p):
         entropy += prob(e, p) * infoMeasure(e, p)
     return entropy
 
-print(prob(5, 0.3))
+print(sumProb(500, 0.5))
