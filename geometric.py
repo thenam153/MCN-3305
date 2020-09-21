@@ -5,10 +5,10 @@ def prob(n, p):
 def infoMeasure(n, p):
     return -math.log2(prob(n, p))
 def sumProb(N, p):
-    """
+    '''
         Dùng phương pháp thực nghiệm tính toán cho thấy
         hàm sumProb trả về giá trị 1 
-    """
+    '''
     xs = 0.0
     for s in range(1, N + 1):
         xs += prob(s, p)
@@ -19,4 +19,4 @@ def approxEntropy(N, p):
         entropy += prob(e, p) * infoMeasure(e, p)
     return entropy
 
-print(sumProb(500, 0.5))
+print(approxEntropy(500, 0.5))
