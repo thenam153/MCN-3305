@@ -15,4 +15,4 @@ def approxEntropy(N, p):
         entropy += prob(e, p, N) * infoMeasure(e, p, N)
     return entropy
 
-print(sumProb(5, 1/3))
+# print(sumProb(5, 1/3))
