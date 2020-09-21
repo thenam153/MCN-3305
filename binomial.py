@@ -6,12 +6,12 @@ def infoMeasure(n, p, N):
     return -math.log2(prob(n, p, N))
 def sumProb(N, p):
     xs = 0.0
-    for s in range(1, N + 1):
+    for s in range(0, N + 1):
         xs += prob(s, p, N)
     return xs
 def approxEntropy(N, p):
     entropy = 0.0
-    for e in range(1, N + 1):
+    for e in range(0, N + 1):
         entropy += prob(e, p, N) * infoMeasure(e, p, N)
     return entropy
 

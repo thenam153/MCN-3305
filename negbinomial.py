@@ -6,7 +6,7 @@ def infoMeasure(n, p, r):
     return -math.log2(prob(n, p, r))
 def sumProb(N, p, r):
     xs = 0.0
-    for s in range(1, N + 1):
+    for s in range(r, N + 1):
         xs += prob(s, p, r)
     return xs
 def approxEntropy(N, p, r):
